@@ -53,7 +53,7 @@ const CheckoutForm = () => {
     const orderData: NewOrderReqType = {
       shippingInfo,
       shippingCharges,
-      OrderItems: CartItems,
+      orderItems: CartItems,
       subtotal,
       tax,
       discount,
@@ -74,6 +74,8 @@ const CheckoutForm = () => {
 
     if (paymentIntent?.status === "succeeded") {
       await newOrder(orderData);
+
+
       dispatch(resetCart());
       console.log("palcing order");
       toast.success("Order Placed");

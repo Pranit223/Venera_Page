@@ -109,7 +109,7 @@ export type OrderItemType = {
 
 export type NewOrderReqType = {
   shippingInfo: ShippingInfoType;
-  OrderItems: CartItemType[];
+  orderItems: CartItemType[];
   subtotal: number;
   tax: number;
   discount: number;
