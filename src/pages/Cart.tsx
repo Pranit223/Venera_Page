@@ -76,6 +76,10 @@ const Cart = () => {
     dispatch(calculatePrice());
   }, [CartItems]);
 
+  useEffect(() => {
+   localStorage.setItem("myCart",JSON.stringify(CartItems))
+  }, [CartItems])
+  
   return (
     <div className="cart">
       <main>
