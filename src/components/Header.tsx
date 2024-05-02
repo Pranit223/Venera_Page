@@ -7,10 +7,7 @@ import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import { UserType } from "../types/Types";
 
-// const user = {
-//   _id: "",
-//   role: "",
-// };
+
 
 type HeaderProptype={
   user:UserType |null;
