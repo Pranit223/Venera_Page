@@ -75,7 +75,7 @@ const CheckoutForm = () => {
     if (paymentIntent?.status === "succeeded") {
       await newOrder(orderData);
 
-
+      localStorage.clear();
       dispatch(resetCart());
       console.log("palcing order");
       toast.success("Order Placed");
@@ -102,8 +102,8 @@ const Checkout = () => {
   const location = useLocation();
   const clientSecret: string | undefined = location.state;
   if (!clientSecret) {
-  navigate("/cart");
-  return;
+    navigate("/cart");
+    return;
   }
   return (
     <Elements
