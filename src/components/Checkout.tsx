@@ -75,7 +75,7 @@ const CheckoutForm = () => {
     if (paymentIntent?.status === "succeeded") {
       await newOrder(orderData);
 
-      localStorage.clear();
+      localStorage.removeItem("myCart");
       dispatch(resetCart());
       console.log("palcing order");
       toast.success("Order Placed");
